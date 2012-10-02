@@ -2,7 +2,7 @@
 
 = API Google Doc =
 
-http://docs.google.com/document/d/10o7NqKBWECmx7XVDoPPb3_IIbAdbcqK_9OiAS2qLUZc
+https://docs.google.com/document/d/10o7NqKBWECmx7XVDoPPb3_IIbAdbcqK_9OiAS2qLUZc/edit
 
 
 = Specifications =
