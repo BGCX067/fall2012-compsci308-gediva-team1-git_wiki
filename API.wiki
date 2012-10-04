@@ -11,3 +11,91 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
+
+== Analogy ==
+
+We are using MVC, which is like a restaurant. A customer (view) just makes requests and is served by the waiter (controller) who forwards those requests to the chef (model).
+
+== Desired Features ==
+
+ * Simple chart view of the stock
+  * Stock name
+  * Latest Stock Price
+ * Trendline Drawing Tools
+  * 50-day moving average
+  * Simple linear trend lines
+  * Channel (just two lines drawn from two price minimums and maximums)
+ * Loading and comparing multiple stocks
+  * Side by side comparison
+ * Interactive Chart
+  * Adjustable dates
+  * Activating and deactivating view of analysis tools
+
+== Design Scheme ==
+
+The model view controller paradigm will be used throughout this design. The model serves as the wrapper that holds all the data known to the system. It is responsible for building, processing,  and returning requested data. The controller is the middleman between the model and view. It serves as the glue logic that allows the views to interact with the model. The views are responsible for displaying and receiving information from the user.
+
+Data is passed back and forth from the controller and the model via Response and Request objects. To retrieve data from the model, a Request is built by embedding whatever information is desired onto the request object. This request is then passed onto the model, and in “response” the model builds a Response object. This Response object once again contains all the relevant information that came about from the Request. This scheme was chosen because it helps encapsulate data into objects. Doing so allows us to not have random strings, arraylists, maps, and such, floating around the controller. 
+
+== Class Hierarchies ==
+{{{
+public interface class IModel {
+
+  public boolean load(BufferedReader br)
+
+  public String uniqueName()
+
+  public Response process(RequestType r)
+}
+
+public class Stock implements AbstractModel {
+
+  public static enum RequestType
+
+  public Stock(BufferedReader br)
+
+  @Override
+  public boolean load(BufferedReader br)
+
+  @Override
+  public String uniqueName()
+
+  public DataSet info() ???????? Map<String,Object> ????
+
+  @Override
+  public DataSet process(RequestType r)
+}
+
+public class DataSet {
+
+  public Iterator getData()
+
+  public DataSet sort(String attribute)
+  public DataSet range(String attribute, Range range)
+
+  public Number getMax(String attribute)
+  public Number getMin(String attribute)
+  public Number getAverage(String attribute)
+}
+
+public class Controller {
+
+  public boolean chooseFile()
+}
+
+public class Canvas {
+
+  public Canvas(Dimension2D size)
+
+  public void paint()
+}
+
+public class View {
+
+  public View(Point2D position, Dimension2D size)
+
+  public void addChild(View child)
+
+  public paint()
+}
+}}}
