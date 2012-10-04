@@ -38,64 +38,103 @@ The model view controller paradigm will be used throughout this design. The mode
 Data is passed back and forth from the controller and the model via Response and Request objects. To retrieve data from the model, a Request is built by embedding whatever information is desired onto the request object. This request is then passed onto the model, and in “response” the model builds a Response object. This Response object once again contains all the relevant information that came about from the Request. This scheme was chosen because it helps encapsulate data into objects. Doing so allows us to not have random strings, arraylists, maps, and such, floating around the controller. 
 
 == Class Hierarchies ==
+
+ * IModel
+  * Stock
+ * DataSet
+ * Controller
+ * Canvas
+ * View
+  * Header
+  * Graph
+  * Menu
+
+== Methods ==
 {{{
 public interface class IModel {
 
   public boolean load(BufferedReader br)
-
   public String uniqueName()
-
   public Response process(RequestType r)
+
 }
 
 public class Stock implements AbstractModel {
 
   public static enum RequestType
-
   public Stock(BufferedReader br)
-
   @Override
   public boolean load(BufferedReader br)
-
   @Override
   public String uniqueName()
-
   public DataSet info() ???????? Map<String,Object> ????
-
   @Override
   public DataSet process(RequestType r)
+
 }
 
 public class DataSet {
 
   public Iterator getData()
-
   public DataSet sort(String attribute)
   public DataSet range(String attribute, Range range)
-
   public Number getMax(String attribute)
   public Number getMin(String attribute)
   public Number getAverage(String attribute)
+
 }
 
 public class Controller {
 
   public boolean chooseFile()
+
 }
 
 public class Canvas {
 
   public Canvas(Dimension2D size)
-
   public void paint()
+
 }
 
 public class View {
 
   public View(Point2D position, Dimension2D size)
-
   public void addChild(View child)
-
   public paint()
+
+}
+
+public class Header extends View {
+
+  public void setTitle(String title)
+  public void setSubtitle(String subtitle)
+  public void setPrice(String price)
+
+}
+
+public class Graph extends View {
+
+  public void setPoints(Map<Number, Number> points)
+  public void setAxisTitles(String yAxisTitle, String xAxisTitle)
+  public void setColor()
+
+}
+
+public class Menu extends View {
+
+  public void setTitle(String title)
+
+}
+
+public class Button extends View implements MouseListener {
+
+  public void setTitle(String title)
+  public void setMethod(a method which will be in the controller)
+  public void addAttribute(String key, Object value)
+  public void removeAttribute(String key)
+  public void getAttribute(String key)
+  public void mouseClicked()
+
 }
 }}}
