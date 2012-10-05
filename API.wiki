@@ -111,8 +111,10 @@ public class View {
 
 public class Header extends View {
   
-  public Header (Point2D position, Dimension size, String title, String subtitle, String price, Color bgcolor, Color wordColor)
-  public Header (Point2D position, Dimension size, String title, String subtitle, String price)
+  public Header (Point2D position, Dimension size, String title,
+    String subtitle, String price, Color bgcolor, Color wordColor)
+  public Header (Point2D position, Dimension size, String title,
+    String subtitle, String price)
   public void paint(Graphics2D pen)
   public void setTitle(String title)
   public void setSubtitle(String subtitle)
@@ -130,7 +132,8 @@ public class Graph extends View {
 
 public class Menu extends View {
 
-  public Menu(Point2D position, Dimension size, String title, Color bgColor, Color textColor)
+  public Menu(Point2D position, Dimension size, String title,
+    Color bgColor, Color textColor)
   public Menu(Point2D position, Dimension size, String title)
   public void paint(Graphics2D pen)
 
