@@ -94,19 +94,26 @@ public class Canvas {
 
   public Canvas(Dimension2D size)
   public void paint()
+  public void addView()
+  public void update()
 
 }
 
 public class View {
 
-  public View(Point2D position, Dimension2D size)
+  public View(Point2D position, Dimension size)
+  public View(Point2D position, Dimension size, Color bgcolor)
+  public paint(Graphics2D pen)
   public void addChild(View child)
-  public paint()
+  public void removeChild(View child)
 
 }
 
 public class Header extends View {
-
+  
+  public Header (Point2D position, Dimension size, String title, String subtitle, String price, Color bgcolor, Color wordColor)
+  public Header (Point2D position, Dimension size, String title, String subtitle, String price)
+  public void paint(Graphics2D pen)
   public void setTitle(String title)
   public void setSubtitle(String subtitle)
   public void setPrice(String price)
@@ -123,7 +130,9 @@ public class Graph extends View {
 
 public class Menu extends View {
 
-  public void setTitle(String title)
+  public Menu(Point2D position, Dimension size, String title, Color bgColor, Color textColor)
+  public Menu(Point2D position, Dimension size, String title)
+  public void paint(Graphics2D pen)
 
 }
 
