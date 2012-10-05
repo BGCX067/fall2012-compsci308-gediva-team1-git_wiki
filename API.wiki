@@ -67,7 +67,7 @@ public class Stock implements AbstractModel {
   public boolean load(BufferedReader br)
   @Override
   public String uniqueName()
-  public DataSet info() ???????? Map<String,Object> ????
+  public String companyName()
   @Override
   public DataSet process(RequestType r)
 
