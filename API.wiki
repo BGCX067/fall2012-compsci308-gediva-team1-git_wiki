@@ -34,20 +34,34 @@ We are using MVC, which is like a restaurant. A customer (view) just makes reque
 
 == Class Hierarchies ==
 
+=== Controller ===
+
+ * Controller
+
+=== Model ===
+
  * IModel (Interface)
   * Stock
- * DataSet
- * Controller
+
+=== View ===
+
  * Canvas
  * View
   * Header
   * Graph
   * Menu
   * Button
+
+=== Data ===
+
+ * DataSet
+ * DataTable
+
+=== Parsers ===
+
  * GenericParser (Abstract)
   * WebParser
   * FileParser
- * DataTable
 
 == Methods ==
 {{{
