@@ -7,10 +7,6 @@ https://docs.google.com/document/d/10o7NqKBWECmx7XVDoPPb3_IIbAdbcqK_9OiAS2qLUZc/
 
 = Specifications =
 
-== Analogy ==
-
-We are using MVC, which is like a restaurant. A customer (view) just makes requests and is served by the waiter (controller) who forwards those requests to the chef (model).
-
 == Desired Features ==
 
  * Simple chart view of the stock
@@ -31,6 +27,10 @@ We are using MVC, which is like a restaurant. A customer (view) just makes reque
 The model view controller paradigm will be used throughout this design. The model serves as the wrapper that holds all the data known to the system. It is responsible for building, processing,  and returning requested data. The controller is the middleman between the model and view. It serves as the glue logic that allows the views to interact with the model. The views are responsible for displaying and receiving information from the user.
 
 Data is passed back and forth from the controller and the model via Response and Request objects. To retrieve data from the model, a Request is built by embedding whatever information is desired onto the request object. This request is then passed onto the model, and in “response” the model builds a Response object. This Response object once again contains all the relevant information that came about from the Request. This scheme was chosen because it helps encapsulate data into objects. Doing so allows us to not have random strings, arraylists, maps, and such, floating around the controller. 
+
+== Analogy ==
+
+We are using MVC, which is like a restaurant. A customer (view) just makes requests and is served by the waiter (controller) who forwards those requests to the chef (model).
 
 == Class Hierarchies ==
 
