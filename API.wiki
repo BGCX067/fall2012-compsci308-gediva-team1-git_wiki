@@ -39,7 +39,7 @@ Data is passed back and forth from the controller and the model via Response and
 
 == Class Hierarchies ==
 
- * IModel
+ * IModel (Interface)
   * Stock
  * DataSet
  * Controller
@@ -48,6 +48,9 @@ Data is passed back and forth from the controller and the model via Response and
   * Header
   * Graph
   * Menu
+ * GenericParser (Abstract)
+  * WebParser
+  * FileParser
 
 == Methods ==
 {{{
