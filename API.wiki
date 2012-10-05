@@ -65,6 +65,12 @@ We are using MVC, which is like a restaurant. A customer (view) just makes reque
 
 == Methods ==
 {{{
+public class Controller {
+
+  public boolean chooseFile()
+
+}
+
 public interface class IModel {
 
   public boolean load(BufferedReader br)
@@ -84,23 +90,6 @@ public class Stock implements AbstractModel {
   public String companyName()
   @Override
   public DataSet process(RequestType r)
-
-}
-
-public class DataSet {
-
-  public Iterator getData()
-  public DataSet sort(String attribute)
-  public DataSet range(String attribute, Range range)
-  public Number getMax(String attribute)
-  public Number getMin(String attribute)
-  public Number getAverage(String attribute)
-
-}
-
-public class Controller {
-
-  public boolean chooseFile()
 
 }
 
@@ -164,6 +153,19 @@ public class Button extends View implements MouseListener {
 
 }
 
+public class DataSet {
+
+  public Iterator getData()
+  public DataSet sort(String attribute)
+  public DataSet range(String attribute, Range range)
+  public Number getMax(String attribute)
+  public Number getMin(String attribute)
+  public Number getAverage(String attribute)
+
+}
+
+public class DataTable {}
+
 public abstract class GenericParser {
         
   public GenericParser()
@@ -189,7 +191,4 @@ public class WebParser {
     public BufferedReader isSupported(String name)
 
 }
-
-public class DataTable {}
-
 }}}
