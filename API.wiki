@@ -185,10 +185,10 @@ public class FileParser {
 
 public class WebParser {
 
-    @Override
-    public BufferedReader generateReader(String name)
-    @Override 
-    public BufferedReader isSupported(String name)
+  @Override
+  public BufferedReader generateReader(String name)
+  @Override 
+  public BufferedReader isSupported(String name)
 
 }
 }}}
