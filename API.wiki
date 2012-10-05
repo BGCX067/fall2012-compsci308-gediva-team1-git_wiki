@@ -54,8 +54,8 @@ We are using MVC, which is like a restaurant. A customer (view) just makes reque
 
 === Data ===
 
- * DataSet
- * DataTable
+ * DataSet - returned by requests to model
+ * DataTable - internals for models and dataset
 
 === Parsers ===
 
