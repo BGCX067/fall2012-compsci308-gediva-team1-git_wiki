@@ -79,7 +79,7 @@ public interface class IModel {
 
 }
 
-public class Stock implements AbstractModel {
+public class Stock implements IModel {
 
   public static enum RequestType
   public Stock(BufferedReader br)
