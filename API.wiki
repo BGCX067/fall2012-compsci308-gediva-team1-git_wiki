@@ -46,6 +46,7 @@ We are using MVC, which is like a restaurant. A customer (view) just makes reque
  * GenericParser (Abstract)
   * WebParser
   * FileParser
+ * DataTable
 
 == Methods ==
 {{{
@@ -135,4 +136,33 @@ public class Button extends View implements MouseListener {
   public void mouseClicked()
 
 }
+
+public abstract class GenericParser {
+        
+  public GenericParser()
+  public BufferedReader generateReader(String name)
+  public BufferedReader isSupported(String name)
+
+}
+
+public class FileParser {
+
+  @Override
+  public BufferedReader generateReader(String name)
+  @Override 
+  public BufferedReader isSupported(String name)
+
+}
+
+public class WebParser {
+
+    @Override
+    public BufferedReader generateReader(String name)
+    @Override 
+    public BufferedReader isSupported(String name)
+
+}
+
+public class DataTable {}
+
 }}}
