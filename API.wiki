@@ -68,13 +68,13 @@ We are using MVC, which is like a restaurant. A customer (view) just makes reque
 
 <code language="java">
 public class Controller {
-
+ 
   public boolean chooseFile()
 
 }
 
 public interface class IModel {
-
+ 
   public boolean load(BufferedReader br)
   public String uniqueName()
   public DataSet process(RequestType r)
@@ -82,7 +82,7 @@ public interface class IModel {
 }
 
 public class Stock implements IModel {
-
+ 
   public static enum RequestType
   public Stock(BufferedReader br)
   @Override
@@ -96,7 +96,7 @@ public class Stock implements IModel {
 }
 
 public class Canvas {
-
+ 
   public Canvas(Dimension2D size)
   public void paint()
   public void addView()
@@ -105,7 +105,7 @@ public class Canvas {
 }
 
 public class View {
-
+ 
   public View(Point2D position, Dimension size)
   public View(Point2D position, Dimension size, Color bgcolor)
   public paint(Graphics2D pen)
@@ -128,7 +128,7 @@ public class Header extends View {
 }
 
 public class Graph extends View {
-
+ 
   public void setPoints(Map<Number, Number> points)
   public void setAxisTitles(String yAxisTitle, String xAxisTitle)
   public void setColor()
@@ -136,7 +136,7 @@ public class Graph extends View {
 }
 
 public class Menu extends View {
-
+ 
   public Menu(Point2D position, Dimension size, String title,
     Color bgColor, Color textColor)
   public Menu(Point2D position, Dimension size, String title)
@@ -145,7 +145,7 @@ public class Menu extends View {
 }
 
 public class Button extends View implements MouseListener {
-
+ 
   public void setTitle(String title)
   public void setMethod(a method which will be in the controller)
   public void addAttribute(String key, Object value)
@@ -156,7 +156,7 @@ public class Button extends View implements MouseListener {
 }
 
 public class DataSet {
-
+ 
   public Iterator getData()
   public DataSet sort(String attribute)
   public DataSet range(String attribute, Range range)
@@ -177,7 +177,7 @@ public abstract class GenericParser {
 }
 
 public class FileParser {
-
+ 
   @Override
   public BufferedReader generateReader(String name)
   @Override 
@@ -186,10 +186,11 @@ public class FileParser {
 }
 
 public class WebParser {
-
+ 
   @Override
   public BufferedReader generateReader(String name)
   @Override 
   public BufferedReader isSupported(String name)
 
-}</code>
+}
+</code>
