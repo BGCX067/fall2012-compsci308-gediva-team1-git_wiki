@@ -83,7 +83,7 @@ public interface class IModel {
 
 public class Stock implements IModel {
  
-  public static enum RequestType
+  public static enum RequestType 
   public Stock(BufferedReader br)
   @Override
   public boolean load(BufferedReader br)
