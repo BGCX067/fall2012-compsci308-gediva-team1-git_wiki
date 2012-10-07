@@ -63,8 +63,10 @@ We are using MVC, which is like a restaurant. A customer (view) just makes reque
   * WebParser
   * FileParser
 
+
 == Methods ==
-{{{
+
+<code language="java">
 public class Controller {
 
   public boolean chooseFile()
@@ -190,5 +192,4 @@ public class WebParser {
   @Override 
   public BufferedReader isSupported(String name)
 
-}
-}}}
+}</code>
